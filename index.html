@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hadi Fawwaz Portfolio</title>
+  <meta name="description" content="portfolio for Hadi Fawwaz Sudewo" />
+
+  <!-- Fonts & icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Favicon: inline SVG data URI -->
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='%236c63ff'/><stop offset='1' stop-color='%2300d4a6'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><text x='50' y='62' font-size='48' font-family='Poppins, Arial, sans-serif' fill='white' font-weight='700' text-anchor='middle'>HF</text></svg>">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="accent-violet">
+  <div class="wrap">
+    <header>
+      <div class="nav">
+        <div class="brand">
+          <div class="logo" aria-hidden="false" title="Hadi Fawwaz logo">
+            <!-- SVG logo -->
+            <svg width="44" height="44" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle">
+              <title id="logoTitle">Hadi Fawwaz logo</title>
+              <defs>
+                <linearGradient id="lg" x1="0" x2="1">
+                  <stop offset="0" stop-color="#6c63ff"/>
+                  <stop offset="1" stop-color="#00d4a6"/>
+                </linearGradient>
+                <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.14" />
+                </filter>
+              </defs>
+              <rect x="0" y="0" width="48" height="48" rx="10" fill="url(#lg)" filter="url(#soft)" />
+              <text x="50%" y="58%" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="20" text-anchor="middle" fill="#021018">HF</text>
+            </svg>           
+          </div>
+          <div>
+            <h1 style="margin:0;font-size:14px">Hadi Fawwaz</h1>
+            <small style="color:var(--muted)">Junior Web Developer</small>
+          </div>
+        </div>
+
+        <nav aria-label="Main navigation">
+  <ul id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#portfolio">Work</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#sertifikat">Sertifikat</a></li> <!-- LINK BARU -->
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+        <div class="toolbar">
+          <!-- <div class="pill">Theme</div>
+          <button class="theme-btn" title="Violet" aria-label="Violet theme" onclick="setAccent('accent-violet')" style="background:linear-gradient(90deg,#6c63ff,#00d4a6)"></button>
+          <button class="theme-btn" title="Sunset" aria-label="Sunset theme" onclick="setAccent('accent-sunset')" style="background:linear-gradient(90deg,#ff7a59,#ffd56b)"></button>
+          <button class="theme-btn" title="Teal" aria-label="Teal theme" onclick="setAccent('accent-teal')" style="background:linear-gradient(90deg,#00d4a6,#00b4ff)"></button> -->
+
+          <a class="cta" href="#contact"><i class='bx bx-envelope'></i> Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="home" class="hero">
+      <section class="hero-card fadeIn">
+        <span class="kicker">Hey, I build things</span>
+        <h2 class="big">Hadi Fawwaz — Web Developer & Designer</h2>
+        <p class="lead">kita belajar menguasai teknologi, bukan dikuasai olehnya. Programmer
+sejati adalah yang mampu memanfaatkan layar untuk solusi.
+Profil</p>
+
+        <div class="roles" aria-hidden="true">
+          <div class="role">Student</div>
+          <div class="role">Web Designer</div>
+          <div class="role">UI/UX</div>
+          <div class="role">Game Enthusiast</div>
+        </div>
+
+        
+
+        <div style="margin-top:18px;display:flex;gap:12px">
+          <a class="btn-ghost" href="#portfolio">See Work</a>
+          <a class="btn-ghost" href="#timeline">My Journey</a>
+        </div>
+      </section>
+
+      <aside class="hero-visual fadeIn" aria-hidden="true">
+        <div class="blob" aria-hidden></div>
+        <div class="profile" role="img" aria-label="">
+          
+          <img src="img/Hadi.webp" alt="Hadi profile" />
+        </div>
+      </aside>
+    </main>   
+    
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <h2 style="margin:0">Selected Projects</h2>
+        <small style="color:var(--muted)">Hand-picked works — click a card to open details</small>
+      </div>
+
+      <div id="portfolioGrid" class="portfolio-grid stagger">
+        <!-- Example project cards: edit or duplicate -->
+        <article class="project card" data-title="Tech Educa" data-image="img/techeduca.webp" data-desc="Company profile site built during study. Responsive layout and semantic HTML." data-tags="HTML,CSS,JS" data-url="https://hadifawwaz.github.io/Modul-3-Hasil-Sertikom/">
+          <img src="img/techeduca.webp" alt="Tech Educa project">
+          <div class="meta">
+            <h3>Tech Educa</h3>
+            <p>Web Development — company profile</p>
+            <div class="actions">
+              <a class="btn-ghost" href="https://hadifawwaz.github.io/Modul-3-Hasil-Sertikom/" target="_blank">View</a>
+              <button class="btn-ghost" onclick="copyLink('https://hadifawwaz.github.io/Modul-3-Hasil-Sertikom/')">Copy URL</button>
+              <button class="btn-ghost" onclick="setFeatured(this)">Set Active</button>
+            </div>
+            <div style="margin-top:8px"><span class="badge">HTML</span> <span class="badge">CSS</span></div>
+          </div>
+        </article>
+
+        <article class="project card" data-title="Wedding Invitation" data-image="img/wedding.webp" data-desc="A responsive wedding invitation site created with Bootstrap — includes RSVP and gallery." data-tags="Bootstrap,HTML,CSS" data-url="https://hadifawwaz.github.io/Modul-5-Penerapan-Boostrap-2-Studi-kasus-wedding-invitation/">
+          <img src="img/wedding.webp" alt="Wedding Invitation project">
+          <div class="meta">
+            <h3>Wedding Invitation</h3>
+            <p>Design + Responsive layout</p>
+            <div class="actions">
+              <a class="btn-ghost" href="https://hadifawwaz.github.io/Modul-5-Penerapan-Boostrap-2-Studi-kasus-wedding-invitation/" target="_blank">View</a>
+              <button class="btn-ghost" onclick="copyLink('https://hadifawwaz.github.io/Modul-5-Penerapan-Boostrap-2-Studi-kasus-wedding-invitation/')">Copy URL</button>
+              <button class="btn-ghost" onclick="setFeatured(this)">Set Active</button>
+            </div>
+            <div style="margin-top:8px"><span class="badge">Design</span> <span class="badge">Responsive</span></div>
+          </div>
+        </article>
+
+        <article class="project card" data-title="Sertikom" data-image="img/exprotravel.jpg" data-desc="Learning project focusing on static site structure and content layout." data-tags="HTML,CSS" data-url="https://hadifawwaz.github.io/Modul-2-Web-Company-Profile-Tech-Educa/">
+          <img src="img/exprotravel.jpg" alt="Sertikom project">
+          <div class="meta">
+            <h3>Sertikom</h3>
+            <p>Static site — learning project</p>
+            <div class="actions">
+              <a class="btn-ghost" href="https://hadifawwaz.github.io/Modul-2-Web-Company-Profile-Tech-Educa/" target="_blank">View</a>
+              <button class="btn-ghost" onclick="copyLink('https://hadifawwaz.github.io/Modul-2-Web-Company-Profile-Tech-Educa/')">Copy URL</button>
+              <button class="btn-ghost" onclick="setFeatured(this)">Set Active</button>
+            </div>
+            <div style="margin-top:8px"><span class="badge">Study</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Skills -->
+       <section id="skills">
+      <h2 style="margin:0 0 12px">Skills</h2>
+      <div class="grid-3">
+        <div class="skill-card card">
+          <h4>Frontend</h4>
+          <div class="skill"><strong>HTML</strong><div class="bar"><i style="width:82%"></i></div></div>
+          <div class="skill"><strong>CSS</strong><div class="bar"><i style="width:74%"></i></div></div>
+          <div class="skill"><strong>JS</strong><div class="bar"><i style="width:68%"></i></div></div>
+        </div>
+        <div class="skill-card card">
+          <h4>Backend</h4>
+
+          <div class="skill">
+            <div class="skill-left">
+              <!-- PHP icon: simple badge -->
+              <svg width="22" height="16" viewBox="0 0 64 44" xmlns="http://www.w3.org/2000/svg" aria-hidden><rect rx="6" width="64" height="44" fill="#8892bf"/><text x="32" y="28" font-size="20" font-family="Poppins, Arial" font-weight="700" text-anchor="middle" fill="#fff">PHP</text></svg>
+              <strong style="margin-left:8px">PHP</strong>
+            </div>
+            <div class="bar"><i style="width:78%"></i></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-left">
+              <!-- Flowbite icon: small UI square -->
+              <svg width="22" height="16" viewBox="0 0 64 44" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <rect x="6" y="6" width="20" height="14" rx="3" fill="#0ea5a4"/><rect x="38" y="6" width="20" height="14" rx="3" fill="#06b6d4"/>
+              </svg>
+              <strong style="margin-left:8px">Flowbite</strong>
+            </div>
+            <div class="bar"><i style="width:60%"></i></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-left">
+              <!-- Breeze icon: wind swirl -->
+              <svg width="22" height="16" viewBox="0 0 64 44" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <path d="M6 24c6-6 18-6 24 0s18 6 24 0" stroke="#7dd3fc" stroke-width="3" fill="none" stroke-linecap="round"/>
+              </svg>
+              <strong style="margin-left:8px">Breeze</strong>
+            </div>
+            <div class="bar"><i style="width:58%"></i></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-left">
+              <!-- MySQL icon: small cylinder -->
+              <svg width="22" height="16" viewBox="0 0 64 44" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <ellipse cx="32" cy="10" rx="20" ry="6" fill="#ffd166"/><rect x="12" y="10" width="40" height="18" fill="#ffd166"/><ellipse cx="32" cy="28" rx="20" ry="6" fill="#f4a261"/>
+              </svg>
+              <strong style="margin-left:8px">MySQL</strong>
+            </div>
+            <div class="bar"><i style="width:66%"></i></div>
+          </div>
+
+        </div>
+        <div class="skill-card card">
+          <h4>FrameWorks</h4>
+         <div class="skill">
+            <div class="skill-left">
+              <!-- Laravel icon: stylized L -->
+              <svg width="22" height="16" viewBox="0 0 64 44" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <path d="M6 30 L20 14 L34 30 L48 14 L58 24" stroke="#f05340" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <strong style="margin-left:8px">Laravel</strong>
+            </div>
+            
+            
+            <div class="bar"><i style="width:72%"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- sertifikat -->
+    <section id="sertifikat" class="certificates">
+   <h2>Sertifikat Saya</h2>
+
+  <div class="cert-list">
+    <!-- Sertifikat 1 -->
+    <div class="cert-row">
+      <div class="cert-card">
+        <img src="img/IMG-20250916-WA0006.jpg" alt="Sertifikat 1 Depan">
+        <p class="cert-caption">Landing Page (Depan)</p>
+      </div>
+      <div class="cert-card">
+        <img src="img/IMG-20250916-WA0005.jpg" alt="Sertifikat 1 Belakang">
+        <p class="cert-caption">Landing Page (Belakang)</p>
+      </div>
+    </div>
+
+    <!-- Sertifikat 2 -->
+    <div class="cert-row">
+      <div class="cert-card">
+        <img src="img/IMG-20250916-WA0007.jpg" alt="Sertifikat 2 Depan">
+        <p class="cert-caption">PHP dan MySQL (Depan)</p>
+      </div>
+      <div class="cert-card">
+        <img src="img/IMG-20250916-WA0008.jpg" alt="Sertifikat 2 Belakang">
+        <p class="cert-caption">PHP dan MySQL (Belakang)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2 style="margin:0 0 12px">Contact</h2>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px" class="card">
+          <h4 style="margin-top:0">Say hello</h4>
+          <p style="color:var(--muted)">I'm available for internships, freelance or collaborations — feel free to reach out.</p>
+          <div style="margin-top:12px">
+            <p style="margin:0"><strong>Location</strong><br><small style="color:var(--muted)">Jl Poras no 7 Sindang Barang Loji, Kota Bogor</small></p>
+            <p style="margin:12px 0 0"><strong>Email</strong><br><a href="mailto:hadifawwazsudewo@gmail.com" style="color:var(--accent2);text-decoration:none">hadifawwazsudewo@gmail.com</a></p>
+            <p style="margin:12px 0 0"><strong>Phone</strong><br><small style="color:var(--muted)">+62 0822 1042 0548</small></p>
+          </div>
+        </div>
+
+        <form id="contactForm" class="card" onsubmit="handleSubmit(event)">
+          <input name="name" placeholder="Your name" required />
+          <input name="email" type="email" placeholder="Email" required />
+          <input name="subject" placeholder="Subject" />
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button class="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <small>&copy; 2025 Hadi Fawwaz Sudewo</small>
+    </footer>
+  </div>
+
+  <!-- Modal markup -->
+  <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-hidden="true">
+    <div class="modal" role="document">
+      <div style="display:flex;gap:12px;align-items:flex-start">
+        <img id="modalImg" src="" alt="project image" />
+        <div class="meta">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <h3 id="modalTitle" style="margin:0"></h3>
+              <small id="modalTags" style="color:var(--muted)"></small>
+            </div>
+            <div>
+              <button class="close-x" aria-label="Close" onclick="closeModal()">✕</button>
+            </div>
+          </div>
+
+          <p id="modalDesc" style="color:var(--muted);margin-top:12px"></p>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a id="modalUrl" class="btn-ghost" href="#" target="_blank">Open project</a>
+            <button class="btn-ghost" onclick="shareProject()">Copy link</button>
+            <button class="btn-ghost" onclick="toggleFeaturedFromModal()">Set Active</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
+  
+</body>
+</html>
