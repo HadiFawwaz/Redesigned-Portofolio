@@ -1,6 +1,3 @@
-/* =========================
-   Variabel global (ganti di sini kalau mau tema)
-   ========================= */
 :root{
   --bg: #0b1020;
   --card: #0f1724;
@@ -9,12 +6,12 @@
   --accent1: #6c63ff;
   --accent2: #00d4a6;
 
-  /* variasi 'glass' / transparansi yang sering dipakai */
-  --glass: rgba(255,255,255,0.04);    /* dipakai utk beberapa card */
-  --glass-02: rgba(255,255,255,0.02); /* background ringan */
-  --glass-01: rgba(255,255,255,0.01); /* background lebih tipis */
+ 
+  --glass: rgba(255,255,255,0.04);    
+  --glass-02: rgba(255,255,255,0.02); 
+  --glass-01: rgba(255,255,255,0.01); 
 
-  /* border helper (karena border sering 0.02/0.03/0.04) */
+ 
   --border-02: 1px solid rgba(255,255,255,0.02);
   --border-03: 1px solid rgba(255,255,255,0.03);
   --border-04: 1px solid rgba(255,255,255,0.04);
@@ -23,13 +20,12 @@
   --maxw: 1200px;
 }
 
-/* tema aksen (diganti runtime via class di <body>) */
 .accent-violet{--accent1:#6c63ff;--accent2:#00d4a6}
 .accent-sunset{--accent1:#ff7a59;--accent2:#ffd56b}
 .accent-teal{--accent1:#00d4a6;--accent2:#00b4ff}
 
 /* =========================
-   Reset & dasar layout
+    dasar layout
    ========================= */
 *{ box-sizing: border-box; }
 html, body { height: 100%; }
@@ -58,13 +54,12 @@ header{ position: sticky; top: 10px; z-index: 60; }
   gap:16px;
   padding:8px;
   border-radius:20px;
-  /* gunakan 2-tahap gradient seperti semula */
   background: linear-gradient(90deg, var(--glass-02), var(--glass-01));
   backdrop-filter: blur(6px);
   border: var(--border-03);
 }
 
-/* brand (logo + name) */
+/* brand */
 .brand{ display:flex; align-items:center; gap:12px; }
 .logo{
   width:44px; height:44px; border-radius:10px;
@@ -93,7 +88,7 @@ nav a.active{
   background: linear-gradient(90deg, var(--accent1), var(--accent2));
 }
 
-/* toolbar / small buttons */
+/* toolbar */
 .toolbar{ display:flex; gap:8px; align-items:center; }
 .pill{ background: var(--glass-02); padding:6px 10px; border-radius:999px; color:var(--muted); font-weight:600; }
 .theme-btn{ width:36px; height:36px; border-radius:8px; border:0; cursor:pointer; }
@@ -115,7 +110,7 @@ nav a.active{
   margin:36px 0;
 }
 
-/* hero-card pake 'glass gradient' seperti semula */
+
 .hero-card{
   background: linear-gradient(180deg, var(--glass-02), var(--glass-01));
   padding:36px;
@@ -138,13 +133,13 @@ nav a.active{
 h2.big{ font-size:38px; margin:8px 0 6px; }
 p.lead{ color: var(--muted); line-height:1.6; margin-bottom:18px; }
 
-/* hero visual (kanan) */
+
 .hero-visual{
   position:relative;
   height:360px;
   border-radius:18px;
   overflow:hidden;
-  /* dua radial gradient untuk efek soft lights */
+  
   background:
     radial-gradient(120px 120px at 10% 20%, rgba(108,99,255,0.12), transparent),
     radial-gradient(120px 120px at 85% 80%, rgba(0,212,166,0.08), transparent);
@@ -161,7 +156,7 @@ p.lead{ color: var(--muted); line-height:1.6; margin-bottom:18px; }
 }
 .profile img{ max-width:110%; transform: translateY(4%); }
 
-/* blob = decorative blurred color */
+
 .blob{
   position:absolute; inset:-10%;
   background: linear-gradient(45deg, var(--accent1), var(--accent2));
@@ -171,15 +166,13 @@ p.lead{ color: var(--muted); line-height:1.6; margin-bottom:18px; }
   transition: transform .6s ease;
 }
 .blob::after{
-  /* tambahan ring/spot di blob */
+
   content:''; position:absolute; left:10%; top:12%;
   width:160px; height:160px; border-radius:50%;
   background: rgba(255,255,255,0.03);
 }
 
-/* =========================
-   Roles, Stats (small reusable bits)
-   ========================= */
+
 .roles{ display:flex; gap:8px; align-items:center; }
 .roles .role{ background: var(--glass-02); padding:6px 10px; border-radius:999px; color:var(--muted); font-weight:600; }
 
@@ -195,9 +188,7 @@ p.lead{ color: var(--muted); line-height:1.6; margin-bottom:18px; }
 .stat h4{ margin:0; font-size:18px; color:#fff; }
 .stat p{ margin:4px 0 0; color:var(--muted); font-size:13px; }
 
-/* =========================
-   Generic Card & Grid
-   ========================= */
+
 section{ margin:48px 0; }
 .grid-3{ display:grid; grid-template-columns: repeat(3,1fr); gap:18px; }
 .card{
@@ -207,14 +198,14 @@ section{ margin:48px 0; }
   border: var(--border-03);
 }
 
-/* Grid sama kayak sebelumnya */
+/* Grid*/
 .cert-list {
       display: grid;
-      gap: 30px; /* jarak antar sertifikat */
+      gap: 30px; 
     }
     .cert-row {
       display: grid;
-      grid-template-columns: 1fr 1fr; /* depan & belakang */
+      grid-template-columns: 1fr 1fr; 
       gap: 20px;
     }
     .cert-card {
@@ -237,9 +228,7 @@ section{ margin:48px 0; }
     }
 
 
-/* =========================
-   Portfolio (horizontal scroll)
-   ========================= */
+
 .portfolio-grid{
   display:flex;
   gap:18px;
@@ -247,7 +236,7 @@ section{ margin:48px 0; }
   padding:10px 6px;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
-  flex-wrap: nowrap; /* penting: jangan wrap */
+  flex-wrap: nowrap; 
   align-items: stretch;
 }
 
@@ -280,7 +269,7 @@ section{ margin:48px 0; }
 .btn-ghost:hover{ color:#fff; }
 .badge{ display:inline-block; padding:6px 8px; border-radius:999px; background:var(--glass-02); color:var(--muted); font-weight:700; }
 
-/* featured badge (dalam project .meta) */
+/* featured badge */
 .project .featured{
   background: linear-gradient(90deg, var(--accent1), var(--accent2));
   color:#021;
@@ -288,9 +277,7 @@ section{ margin:48px 0; }
   border-radius:999px;
 }
 
-/* =========================
-   Modal (project detail)
-   ========================= */
+
 .modal-backdrop{
   position:fixed; inset:0;
   background: rgba(0,0,0,0.6);
@@ -340,18 +327,79 @@ section{ margin:48px 0; }
 /* =========================
    Timeline
    ========================= */
-.timeline{ position:relative; padding-left:18px; }
-.timeline::before{
-  content:""; position:absolute; left:10px; top:0; bottom:0; width:2px;
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  padding: 0;
+}
+
+/* Garis tengah */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
   background: linear-gradient(180deg, var(--accent1), var(--accent2));
-  opacity:0.25;
+  opacity: 0.25;
+  transform: translateX(-50%);
 }
-.t-item{ position:relative; margin-bottom:22px; padding:10px 12px 10px 28px; }
-.t-item .dot{
-  position:absolute; left:4px; top:10px; width:12px; height:12px; border-radius:50%;
+
+.t-item {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+/* Card */
+.t-box {
+  background: rgba(255,255,255,0.05);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.t-item .dot {
+  position: absolute;
+  top: 28px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
   background: var(--accent1);
-  box-shadow: 0 0 12px rgba(108,99,255,0.12);
+  box-shadow: 0 0 12px rgba(108, 99, 255, 0.25);
 }
+
+/* Item ganjil di kiri */
+.t-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.t-item:nth-child(odd) .dot {
+  right: -7px;
+}
+
+/* Item genap di kanan */
+.t-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.t-item:nth-child(even) .dot {
+  left: -7px;
+}
+
+/* Animasi aktif */
+.t-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* =========================
    Forms
